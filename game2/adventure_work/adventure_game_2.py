@@ -1,9 +1,11 @@
 import random
 import battle_system
-
-debug = 1
+import function_read_config
 
 #########################################
+#debug
+
+debug = 1
 
 def debug_1():
     if (debug == 1):
@@ -13,31 +15,20 @@ def debug_1():
         print("pos: ", pos)
         print("room: ", room)
         print("heading: ", heading)
+        print("room_l=", str(room_l))
         print("###")
         
 
 ########################################
+#read config files
 
-config_file = "adventure_config.txt"
+list_r = function_read_config.read_config("adventure_config.txt")
+list_l = function_read_config.read_config("look_config.txt")
 
-with open(config_file, "r") as config_obj:
-    for line in config_obj:
-        list_1 = config_obj.read().splitlines()             # split at linebreak > write to list
-        list_2 = []
-        for i in list_1:                                    # for element in list: split > write to sublist
-            list_2.append(i.split())
-            list_r = []
-        x = 0
-        while x < len(list_2):                              # for every index in list_2
-            dict_1 = {}
-            for block in list_2[x]:
-                block = block.strip(",")  # remove ,
-                wort = block.split(":")  # split at :
-                dict_1[wort[0]] = int(wort[1])  # make dict from direction : roomnumber
-            list_r.append(dict_1)  # append to final list_r
-            x = x + 1
 
-###################################################################################
+
+########################################
+#variables
 
 princess = random.randint(1, len(list_r)) 
 
@@ -46,6 +37,7 @@ while pos == princess:
     pos = random.randint(1, len(list_r))       #if pos = pos_princess
 
 room = list_r[pos - 1]
+room_l = list_l[pos - 1]
 
 heading = ""
 player_hp = 100
@@ -55,6 +47,7 @@ playername = "testplayer"                      #remove!
                       
 
 #########################################
+#defs
 
 def count_char_2(t1, t2):
     if len(t1) >= len(t2):
@@ -95,8 +88,8 @@ def ausgabe_found_princess():
     
 
 
-
 ###################################################################################
+#intro
 
 debug_1()
 
@@ -113,6 +106,7 @@ Don't waste your time.""")
 print(text_center("Move!"))
 
 ######################################
+#mainloop
 
 while (pos != princess):
 
@@ -131,12 +125,16 @@ while (pos != princess):
     if (command == "move"):
         heading = subject
         if (heading in room):
-            pos = room[heading]
+            pos = int(room[heading])
             room = list_r[pos - 1]
         else:
             move_err()
-    # elif (command == "look"):  # looking at the walls, coming from mapfile every 2nd line for each room
-    #     heading = subject
-    #     # funktion look(heading)
+            
+    elif (command == "look"):
+        heading = subject
+        if (heading in room_l):
+            view = room_l[heading]
+            print("-" * 82)
+            print("There is a", view)
 
 ausgabe_found_princess()
