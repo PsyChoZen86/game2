@@ -1,0 +1,7 @@
+[
+{"west": 2, "east": 5},  # room 1
+{"east": 1, "north": 3}, # room 2
+{"south": 2, "east": 4}, # room 3
+{"west": 3},             # room 4
+{"west": 1}              # room 5
+]
