@@ -1,0 +1,20 @@
+
+north:7 east:2
+west:1 east:3
+west:2 north:8 east:4
+west:3 north:12 east:9
+east:6
+west:5 north:13
+north:10 east:8 south:1 west:16
+west:7 north:12 south:3
+west:4
+north:14 south:7
+west:10 east:12
+west:11 east:13
+north:15 east:19 south:6 west:12
+east:15 south:10
+south:13 west:14
+east:7 north:17
+east:18 south:16
+south:19 west:17
+west:13 north:18
