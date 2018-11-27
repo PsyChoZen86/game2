@@ -10,7 +10,7 @@ def battle(player_hp,player_name):
     import random
 
     enemy_hp = 50 #indicator for remaining enemy hitpoints
-    hp_symbol = "" #symbol used for visualisation
+    hp_symbol = "*" #symbol used for visualisation
     battle_active = True #indicator for battle loop (while battle is active)
     player_choice = "o" #placeholder for player choice variable
     attack_power = 0 #stores the last attacks value
@@ -45,6 +45,12 @@ def battle(player_hp,player_name):
             attack_power = random.randint(8,18)
             print ("\nYou did", attack_power, "damage.")
             enemy_hp = enemy_hp - attack_power
+            attack_power = random.randint(3,10)
+            if attack_power > 3:
+                player_hp = player_hp - attack_power
+                print ("\nThe Troll did", attack_power, "damage.")
+            else:
+                print ("\nYou dodged the attack.")
         #run -> print escape message & leave loop    
         elif player_choice == "r":
             print ("You ran away...")
@@ -55,4 +61,6 @@ def battle(player_hp,player_name):
         
     print ("The battle is over!\n")
 
+    return player_hp
 
+#battle(100, "Hans") #for testing purposes
