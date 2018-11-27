@@ -1,6 +1,6 @@
-import import_spielername
+import get_playername
 
 
-name = import_spielername
+name = get_playername.playername()
 
 print("name=", name)
