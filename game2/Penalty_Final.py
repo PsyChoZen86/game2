@@ -1,6 +1,6 @@
 import random as r                                                                                     #import random
 import time                                                                                            #import time
-import überschrift
+import title_penalty
 shoot_direction = ["left", "right", "middle"]                                                          #shootdirection
 ki_score  = 0                                                                                          #computer score
 pl_score  = 0                                                                                          #player score
