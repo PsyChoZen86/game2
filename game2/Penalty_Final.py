@@ -6,7 +6,7 @@ ki_score  = 0                                                                   
 pl_score  = 0                                                                                          #player score
 n_penalties = 0                                                                                        #total number of penalties
 
-ueberschrift.titel()                                                                                   #title with stars and name
+title_penalty.titel()                                                                                   #title with stars and name
 
 def penalty_pl():                                                                                      #function for the player penalty
     global n_penalties                                                                                 #load the variable for total number of penalties
