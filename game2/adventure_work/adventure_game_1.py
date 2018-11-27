@@ -1,5 +1,5 @@
 import random
-import get_playername
+import battle_system
 
 debug = 0
 
@@ -49,11 +49,9 @@ room = list_r[pos - 1]
 
 heading = ""
 player_hp = 100
-player_power = 30
-player_armor = 10
-player_skill = 1
-
 monster_list = [2,3,8]
+
+playername = "testplayer"                      #remove!
                       
 
 #########################################
@@ -103,7 +101,7 @@ def ausgabe_found_princess():
 debug_1()
 
 print("-" * 82)
-name = get_playername.playername()
+name = playername
 name = name + "!"
 text = "Welcome to the dungeon"
 star = "+"
@@ -125,27 +123,12 @@ while (pos != princess):
     
     if pos in monster_list:
         
-        monster_pos = pos           #monster refresh here >
-        while monster_hp > 0:
-            
-            print("There is a monster.")
-            print("-" * 82)
-            print("Your Health: " + str(player_hp) + ":" + str(player_armor) + " - Monsters health: " + str(monster_hp) + ":" + str(monster_armor))
-            command = input("What you're going to do: 'attack', 'block' or 'run'?")
-
-            #if command == "attack":
-
-
-            #elif command == "block":
-
-
-            #elif command == "run":
-
-                
+        monster_pos = pos        
+        battle_system.battle(player_hp, name)
 
     command, subject = eingabe()
 
-    if (command == "move"):  # add more in-room positions (for rooms with 2 doors at 1 side)
+    if (command == "move"):
         heading = subject
         if (heading in room):
             pos = room[heading]
