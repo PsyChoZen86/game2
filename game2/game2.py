@@ -1,5 +1,5 @@
 #import both games (Penalty Shoot-out and Adventure)
-#import adventure_8
+import adventure_game
 #import penalty_mit_fehler
 #import function_print_message for starting border around the name (Credits Roman)
 import function_print_message
@@ -25,11 +25,9 @@ def mainmenu():
     "adventure" for the adventure game!\n""")
     #execute adventure or shootout
     if game_choice == "adventure":
-        print("asdfafg")
-    #adventure_8.funktionsname
+        adventure_game_6.game(playername)
     elif game_choice == "shoot-out":
-        print("adsfasdf")
-    #penalty_mit_fehler.funktionsname    
+        Penalty_Final.game(playername)    
     else:
         print("Wrong input. Menu is restarting!\n")
         mainmenu()
