@@ -21,6 +21,7 @@ def battle(player_hp, player_name):
     minimum = 8 #minimum damage value for player
     maximum = 18 #maximum damage value for player
     buff_duration = 99 #placeholder for buff counter
+    enemy_alive = True #indicator to know if enemy died or player fled
 
     #returns number of remaining HP as symbols to visualize it
     def hp_graphic(hp, sym):
@@ -57,7 +58,7 @@ def battle(player_hp, player_name):
                 attack_power = random.randint(minimum + 2, maximum + 2)
                 print ("\nYou did", attack_power, "damage.")
                 enemy_hp = enemy_hp - attack_power
-                buff_duration + 1
+                buff_duration = buff_duration + 1
             else:
                 attack_power = random.randint(minimum, maximum)
                 print ("\nYou did", attack_power, "damage.")
@@ -86,7 +87,7 @@ def battle(player_hp, player_name):
                 attack_power = random.randint(1,10)
                 player_hp = player_hp - attack_power
                 print ("\nThe Troll did", attack_power, "damage.")
-                buff_duration + 1
+                buff_duration = buff_duration + 1
                 
             
         #other command -> print error message
@@ -94,7 +95,11 @@ def battle(player_hp, player_name):
             print ("\nPlease try again!\n")
         
     print ("The battle is over!\n")
+    
+    #check if enemy is still alive based on hp remaining
+    if enemy_hp <= 0:
+        enemy_alive = False
 
-    return player_hp
+    return player_hp, enemy_alive
 
 #battle(100, "Test")
