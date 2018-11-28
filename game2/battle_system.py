@@ -68,4 +68,4 @@ def battle(player_hp,player_name):
 
     return player_hp
 
-#battle(100, "Hans") #for testing purposes
+battle(100, "Hans") #for testing purposes
