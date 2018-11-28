@@ -1,7 +1,7 @@
- #A simple turn based battle system with randomly generated damage
-    #and remaining enemy hit points display.
-    #Future versions should include: player hp display - enemy attacking back - more battle options
-    #Alexander Schulze 22.11.2018
+#a simple turn based battle system with randomly generated damage
+#and remaining enemy hit points display.
+#future versions should include: more battle options
+    
 
 
 def battle(player_hp,player_name):
@@ -33,28 +33,33 @@ def battle(player_hp,player_name):
     input("(hit enter to proceed)")
 
     while battle_active == True and enemy_hp > 0:
+        
         #display remaining enemy hp
         print ("\nTroll HP:", enemy_hp) 
         print (hp_graphic(enemy_hp, hp_symbol))
         print ("\n\n" + player_name + " HP:", player_hp)
         print (hp_graphic(player_hp, hp_symbol))
+        
         #ask for player choice
         player_choice = input (choose())
+        
         #attack -> calculate and print damage
         if player_choice == "a":
             attack_power = random.randint(8,18)
             print ("\nYou did", attack_power, "damage.")
             enemy_hp = enemy_hp - attack_power
-            attack_power = random.randint(3,10)
+            attack_power = random.randint(1,10)
             if attack_power > 3:
                 player_hp = player_hp - attack_power
                 print ("\nThe Troll did", attack_power, "damage.")
             else:
                 print ("\nYou dodged the attack.")
-        #run -> print escape message & leave loop    
+                
+        #run -> success -> print escape message & leave loop
         elif player_choice == "r":
             print ("You ran away...")
             battle_active = False
+            
         #other command -> print error message & nothing more
         else:
             print ("\nPlease try again!\n")
