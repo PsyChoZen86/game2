@@ -1,0 +1,20 @@
+
+north:There is a door._east:There is a door._south:Just a wall._west:A boring grey wall.
+north:Just a wall._east:There is a door:_south:Ah, a wall._west:There is a door.
+north:Uh, there's a door:_east:Seems to be a door._south:Only a wall. I think there is nothing special in the south at all._west:There's a wall.
+north:There is a door._east:There is a litte door._south:Nothing._west:A door... again.
+east:6
+west:5_north:13
+north:10_east:8_south:1_west:16
+west:7_north:12_south:3
+west:4
+north:14_south:7
+west:10_east:12
+west:11_east:13
+north:15_east:19_south:6_west:12
+east:15_south:10
+south:13_west:14
+east:7_north:17
+east:18_south:16
+south:19_west:17
+west:13_north:18
