@@ -22,6 +22,7 @@ def penalty_pl():
             
     ki_jumpdirection  = r.choice (shoot_direction)                                                     #computer choice as random, where to jump
     print("\n")
+    time.sleep(1)
     print(f"The Goalkeeper is jumping to the {ki_jumpdirection}")                                      #where is the goaly jumping
     
     
@@ -48,9 +49,13 @@ def penalty_ki():
         pl_jumpdirection = input("Where do you want to dive?   ").lower()                              #the choice as input, where jump
         if pl_jumpdirection in shoot_direction:                                                        #validation 
             valid2 = True                                                                              #validation passed
+            
+            
     ki_directionshoot = r.choice (shoot_direction)                                                     #computer choice as random, where to shoot
     print("\n")
-    print(f"The shot is going to the {ki_directionshoot}")                                             #where is the goaly jumping
+    time.sleep(1)
+    print(f"The shot is going to the {ki_directionshoot}")   
+    
     if ki_directionshoot == "left" and pl_jumpdirection =="right":                                    
         print("You saved the ball! Great Keeper skills! NO GOAL")                                     
     elif ki_directionshoot == "right" and pl_jumpdirection =="left":                                   
@@ -73,11 +78,11 @@ def result():
                 Your score {pl_score}
                 Computer score {ki_score}''')                                                          #showcase for the result
     if pl_score > ki_score:                                                                            #compare the player score and computer score
-        print("Great game, you won!")                                                                  #win
+        print("Great game, you won!")                                                                  
     elif pl_score == ki_score:                                                                         #compare the player score and computer score
-        print("Remis!")                                                                                #remis
+        print("Remis!")                                                                                
     else:                                                                                              #every other result
-        print("You lost the game, try again!")                                                         #lost
+        print("You lost the game, try again!")                                                         
 
 ##########################################################
 #loop for the penalties until 10
