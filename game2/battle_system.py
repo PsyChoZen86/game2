@@ -58,7 +58,7 @@ def battle(player_hp, player_name):
                 attack_power = random.randint(minimum + 2, maximum + 2)
                 print ("\nYou did", attack_power, "damage.")
                 enemy_hp = enemy_hp - attack_power
-                buff_duration + 1
+                buff_duration = buff_duration + 1
             else:
                 attack_power = random.randint(minimum, maximum)
                 print ("\nYou did", attack_power, "damage.")
@@ -87,7 +87,7 @@ def battle(player_hp, player_name):
                 attack_power = random.randint(1,10)
                 player_hp = player_hp - attack_power
                 print ("\nThe Troll did", attack_power, "damage.")
-                buff_duration + 1
+                buff_duration = buff_duration + 1
                 
             
         #other command -> print error message
