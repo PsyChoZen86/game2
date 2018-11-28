@@ -6,11 +6,11 @@ west:3_north:12_east:9
 east:6
 west:5_north:13
 north:10_east:8_south:1_west:16
-west:7_north:12_south:3
+west:7_south:3
 west:4
-north:14_south:7
+north:14_east:11_south:7
 west:10_east:12
-west:11_east:13
+west:11_east:13_south:4
 north:15_east:19_south:6_west:12
 east:15_south:10
 south:13_west:14

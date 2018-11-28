@@ -129,6 +129,7 @@ def game(game2_playername):
             if (heading in room):
                 pos = int(room[heading])
                 room = list_r[pos - 1]
+                room_l = list_l[pos - 1]                
             else:
                 move_err()
                 
