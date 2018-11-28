@@ -3,9 +3,9 @@ north:There is a door._east:There is a door._south:Just a wall._west:A boring gr
 north:Just a wall._east:There is a door:_south:Ah, a wall._west:There is a door.
 north:Uh, there's a door:_east:Seems to be a door._south:Only a wall. I think there is nothing special in the south at all._west:There's a wall.
 north:There is a door._east:There is a litte door._south:Nothing._west:A door... again.
-east:6
-west:5_north:13
-north:10_east:8_south:1_west:16
+north:Nothing here._east:A door._south:There's a rack_west:Some tools for cleaning.
+north:Looks like there is a door._east:There is a long bookshelf._south:Just a wall._west:There's a little door. Maybe a storeroom.
+north:There is a door to north._east:There is a door to east._south:A door to south_west:There's door. Looks like it's going outside there.
 west:7_north:12_south:3
 west:4
 north:14_south:7
