@@ -25,7 +25,7 @@ def mainmenu():
     "adventure" for the adventure game!\n""")
     #execute adventure or shootout
     if game_choice == "adventure":
-        adventure_game_6.game(playername)
+        adventure_game.game(playername)
     elif game_choice == "shoot-out":
         Penalty_Final.game(playername)    
     else:
