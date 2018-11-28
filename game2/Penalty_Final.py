@@ -22,6 +22,7 @@ def penalty_pl():
             
     ki_jumpdirection  = r.choice (shoot_direction)                                                     #computer choice as random, where to jump
     print("\n")
+    time.sleep(1)
     print(f"The Goalkeeper is jumping to the {ki_jumpdirection}")                                      #where is the goaly jumping
     
     
