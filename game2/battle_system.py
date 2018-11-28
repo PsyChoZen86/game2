@@ -57,10 +57,16 @@ def battle(player_hp,player_name):
                 
         #run -> success -> print escape message & leave loop
         elif player_choice == "r":
-            print ("You ran away...")
-            battle_active = False
+            if random.randint(1,10) > 4:
+                print ("You ran away...")
+                battle_active = False
+            else:
+                attack_power = random.randint(1,10)
+                player_hp = player_hp - attack_power
+                print ("\nThe Troll did", attack_power, "damage.")
+                
             
-        #other command -> print error message & nothing more
+        #other command -> print error message
         else:
             print ("\nPlease try again!\n")
         
