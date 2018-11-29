@@ -75,7 +75,7 @@ def battle(player_hp, player_name):
         #battlestance -> 3 rounds
         elif player_choice =="b":
             buff_duration = 0
-            print("\nYour minimum and maximum damage raises by 2!")
+            print("\nYour minimum and maximum damage raises by 2 for 3 rounds!")
             
                 
         #run -> success -> print escape message & leave loop
