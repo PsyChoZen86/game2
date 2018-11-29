@@ -15,13 +15,12 @@
 #
 
 
-
 def read_config(f):
 
     config_file = f
 
     with open(config_file, "r") as config_obj:
-        for line in config_obj:
+        for line in config_obj:                                 # line is not used!!
             list_1 = config_obj.read().splitlines()             # split at linebreak > write to list
             list_2 = []
             for i in list_1:                                    # for element in list: split > write to sublist
