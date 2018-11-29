@@ -1,9 +1,15 @@
 import random as r                                                                                     
 import time
-
+import pygame
 
 
 def Game(playername):
+    
+    pygame.mixer.init()
+    pygame.mixer.music.load("Scott_Holmes_-_04_-_Teamwork.mp3")
+    pygame.mixer.music.play()
+    
+    
     shoot_direction = ["left", "right", "middle"]                                                          
     ki_score  = 0                                                                                          #computer score
     pl_score  = 0                                                                                          #player score
@@ -81,7 +87,8 @@ def Game(playername):
         
 
     #function for the result
-    def result(res_kiscore, res_plscore):                                                                                        
+    def result(res_kiscore, res_plscore):
+        pygame.mixer.music.stop()
         print(f''' Here are our result:                                                                                
                     Your score {res_plscore}
                     Computer score {res_kiscore}''')                                                          #showcase for the result

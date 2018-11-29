@@ -3,10 +3,13 @@ import adventure_game
 import Penalty_Final
 #import function_print_message for starting border around the name (Credits Roman)
 import function_print_message
+
+
 #main function menu
 def mainmenu():
+    placeholder = "\n"*20
     #safing input as playername
-    playername = input("Welcome to game2. Please state your name in the following line.\n")
+    playername = input(placeholder + " Welcome to game2. Please state your name in the following line.\n")
     #giving variable allocation
     name = playername
     name = name + "!"
