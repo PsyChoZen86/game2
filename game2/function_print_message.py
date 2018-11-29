@@ -1,4 +1,4 @@
-#function to print a text message like that:
+# function to print a text message like that:
 
 #   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #   +                             your message                                       +
@@ -12,30 +12,26 @@
 
 
 def print_textfield(t, n, s, p):
-        
+
     text = t
     name = n
     star = s
     padding = p
-    
+
     def count_char(text, name):              # calculating length
         if len(text) >= len(name):
-            l = len(text) + padding  # 60
-            return l
+            x = len(text) + padding  # 60
+            return x
         else:
-            l = len(name) + padding  # 60
-            return l
-
+            x = len(name) + padding  # 60
+            return x
 
     def textfield(z, t, n):
         return z * count_char(t, n) + "\n" + \
                z + t.center(count_char(t, n) - 2) + z + "\n" + \
                z + n.center(count_char(t, n) - 2) + z + "\n" + \
                z * count_char(t, n) + "\n"
-    
-    print = textfield(star, text, name)
-    
-    return print
 
+    print_text = textfield(star, text, name)
 
-
+    return print_text
