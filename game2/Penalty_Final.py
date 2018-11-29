@@ -1,6 +1,7 @@
 import random as r                                                                                     
 import time                                                                                                
-import title_penalty
+#import title_penalty
+pl_name = "udo"
 
 
 def game(pl_name):
@@ -8,14 +9,15 @@ def game(pl_name):
     ki_score  = 0                                                                                          #computer score
     pl_score  = 0                                                                                          #player score
     n_penalties = 0                                                                                        #total number of penalties
+    ppl_penalties = 0 
 
-    title_penalty.titel
+#    title_penalty.titel
     
     #function for the player penalty
-    def penalty_pl():        
-        ppl_score = 0
-        ppl_penalties = 0
-        ppl_penalties += 1                                                                                 #update the total number of penalties
+    def penalty_pl(ppl_score, ppl_penalties):        
+        #ppl_score = 0
+        #ppl_penalties = 0
+        ppl_penalties =  ppl_penalties + 1                                                                 #update the total number of penalties
         
         valid = False                                                                                      #is input valid?
         while not valid:
@@ -37,16 +39,16 @@ def game(pl_name):
             print("Keeper saved the ball ! NO GOAL")                                                       
         else:                                                                                                                         
             print("GOOOAAAL, nice shot !")                                                                 
-            ppl_score += 1
-        return ppl_score, ppl_penalties                                                                    #player score update
+            ppl_score = ppl_score +  1
+        return ppl_score, ppl_penalties                 #player score update
 
 
             
     #function for the Computer penalty        
-    def penalty_ki():                                                                                                                                                                 #load the variable for total number of penalties
-        pki_penalties = 0                           
-        pki_score        = 0                                                                               #load the variable for the score of the Computer
-        pki_penalties += 1                                                                                 #update the total number of penalties
+    def penalty_ki(pki_score, pki_penalties):                                                                                                                                                                 #load the variable for total number of penalties
+        #pki_penalties = 0                           
+        #pki_score        = 0                                                                                   #load the variable for the score of the Computer
+        pki_penalties  = pki_penalties + 1                                                          #update the total number of penalties
         
         valid2 = False                                                                                     #is input valid?
         while not valid2:
@@ -68,35 +70,34 @@ def game(pl_name):
             print("Keeper saved the ball ! NO GOAL")                                                       
         else:
             print("Goal, you have to be better !")                                                         
-            pki_score += 1                                                                                 #Computer score update
+            pki_score = pki_score    +1                                                                      #Computer score update
         return pki_score , pki_penalties
             
     #function for the actually score        
     def score(sc_kiscore,sc_plscore):                                                                                           
-        print(f" Your score is    : {sc_plscore} \n Computer score is: {sc_kiscore}")                       #show the actual score
+        print(f" Your score is    : {sc_plscore} \n Computer score is: {sc_kiscore}")                          #show the actual score
         
 
     #function for the result
-    def result(res_plscore, res_kiscore):                                                                                        
+    def result(res_kiscore, res_plscore):                                                                                        
         print(f''' Here are our result:                                                                                
                     Your score {res_plscore}
-                    Computer score {res_kiscore}''')                                                        #showcase for the result
-        if res_plscore > res_kiscore:                                                                       #compare the player score and computer score
+                    Computer score {res_kiscore}''')                                                          #showcase for the result
+        if res_plscore > res_kiscore:                                                                            #compare the player score and computer score
             print("Great game, you won!")                                                                  
-        elif res_plscore == res_kiscore:                                                                    #compare the player score and computer score
+        elif res_plscore == res_kiscore:                                                                         #compare the player score and computer score
             print("Remis!")                                                                                
-        else:                                                                                               #every other result
+        else:                                                                                              #every other result
             print("You lost the game, try again!")
 
     ##########################################################
     #loop for the penalties until 10
-    n_penalties =0
     while n_penalties <=8:                                                                                
-        n_penalties, ki_score = penalty_ki()                                                               #start function penalty_ki
-        score(ki_score , pl_score )                                                                        #show the score
-        n_penalties, pl_score = penalty_pl()                                                               #start function penalty_pl
-        score(ki_score, pl_score)                                                                          #show the score
-    result(ki_score, pl_score)                                                                             #after 10 penalties, show the result
+        ki_score ,  n_penalties = penalty_ki(ki_score, n_penalties)                                                                                       #start function penalty_ki
+        score(ki_score , pl_score )                                                                                                  #show the score
+        pl_score ,  n_penalties= penalty_pl(pl_score, n_penalties)                                                                                       #start function penalty_pl
+        score(ki_score, pl_score)                                                                                                            #show the score
+    result(ki_score, pl_score)                                                                                                                #after 10 penalties, show the result
 
-
+game(pl_name)
 
