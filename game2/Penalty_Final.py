@@ -1,17 +1,19 @@
 import random as r                                                                                     
-import time                                                                                                
-#import title_penalty
-pl_name = "udo"
+import time
 
 
-def game(pl_name):
+
+def Game(playername):
     shoot_direction = ["left", "right", "middle"]                                                          
     ki_score  = 0                                                                                          #computer score
     pl_score  = 0                                                                                          #player score
     n_penalties = 0                                                                                        #total number of penalties
     ppl_penalties = 0 
-
-#    title_penalty.titel
+    print("\n")
+    print(f"Welcome {playername}, you'll play as Cristiano Ronaldo")
+    print("You are able to shoot, left, right or middle ")
+    time.sleep(1)
+  
     
     #function for the player penalty
     def penalty_pl(ppl_score, ppl_penalties):        
@@ -99,5 +101,5 @@ def game(pl_name):
         score(ki_score, pl_score)                                                                                                            #show the score
     result(ki_score, pl_score)                                                                                                                #after 10 penalties, show the result
 
-game(pl_name)
+
 
