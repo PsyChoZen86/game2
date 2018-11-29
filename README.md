@@ -26,3 +26,5 @@ Description:
 
 A collection of 2 minigames accesible and playable via console.
 To start the main program, run game2.py and choose the game you want to play in the main menu.
+
+Requirements: pygame Version >= 1.9.4
