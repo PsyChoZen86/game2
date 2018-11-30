@@ -9,7 +9,7 @@ import function_print_message
 def mainmenu():
     placeholder = "\n"*20
     #safing input as playername
-    playername = input(placeholder + " Welcome to game2. Please state your name in the following line.\n")
+    playername = input(placeholder + "Welcome to game2. Please state your name in the following line.\n")
     #giving variable allocation
     name = playername
     name = name + "!"
