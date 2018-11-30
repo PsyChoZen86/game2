@@ -9,7 +9,7 @@ import function_print_message
 # maps are stored in a configfile > adventure_config.txt
 # view at the walls are stored in > look_config.txt
 # todo: look and map can be merged into one file!
-# todo: room descrition + status visited message from configfile
+# todo: room description + status visited message from configfile
 #
 # Bug: If the player avoids the fight monster will be removed from
 # monster_list. If not, the fight starts again.
@@ -47,18 +47,16 @@ def game(game2_playername):
     ########################################
     # variables
 
-    princess = random.randint(1, len(list_r)) 
+    princess = random.randint(6, len(list_r)) 
 
     pos = 1                                    
-    while pos == princess:
-        pos = random.randint(1, len(list_r))                                    # if pos = pos_princess
-
+    
     room = list_r[pos - 1]                                                      # load initial room from roomlist
     room_l = list_l[pos - 1]                                                    # load initial room from viewlist
 
     heading = ""
     player_hp = 100
-    monster_list = [3, 6, 8, 9, 11, 13, 15, 17, 19 ]                            # need random function
+    monster_list = [3, 6, 8, 9, 11, 13, 15, 17, 19]                             # need random function
 
     name = game2_playername
                           
@@ -122,11 +120,11 @@ def game(game2_playername):
                 monster_pos = pos                                               # set monster pos to player pos
                 player_hp, monster_alive = battle_system.battle(player_hp, name)   # battle
                 if player_hp >= 0:
-                    if monster_alive == False:
+                    if monster_alive is False:
                         monster_list.remove(monster_pos)                        # delete monster from monster_list
                         print_enemy_killed(player_hp)
-                    elif monster_alive == True:
-                        monster_list.remove(monster_pos)                        # Bug: if enemy is not removed > next battle
+                    elif monster_alive is True:
+                        monster_list.remove(monster_pos)                    # Bug: if enemy is not removed > next battle
                         print_enemy_not_killed(player_hp)                       # enemy HP will be max on
                 elif player_hp <= 0:                                            # next room entry!!
                     monster_list.remove(monster_pos)            
@@ -150,7 +148,7 @@ def game(game2_playername):
                     print("-" * 82)
                     print(view)
                 
-        except ValueError:                                              # catch if only one input
+        except ValueError:                                                       # catch if only one input
             input_err()
                         
     print_found_princess()
