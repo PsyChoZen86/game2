@@ -64,7 +64,7 @@ def game(game2_playername):
     # defs
 
     def input_command():
-        a, b = input("Where do you want to do? \n(type:) 'move direction' or 'look direction': ").split()
+        a, b = input("Where do you want to do? \n(type:) 'move direction' or 'look direction' 'north, south, est, west: ").split()
         return a, b
 
     def print_room():
@@ -77,7 +77,7 @@ def game(game2_playername):
         m = "Input Error!"
         print("-" * 82 + "\n" + m.center(82))
         print("\nYou have to input two words. 'command' and 'direction'")
-        print("(type:) 'move direction' or 'look direction': ")
+        print("(type:) 'move north' or 'look east': ")
 
     def print_intro(n):
         pl_name = n
