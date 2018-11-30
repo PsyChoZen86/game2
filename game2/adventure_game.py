@@ -64,7 +64,7 @@ def game(game2_playername):
     # defs
 
     def input_command():
-        a, b = input("Where do you want to do? \n(type:) 'move direction' or 'look direction' 'north, south, est, west: ").split()
+        a, b = input("Where do you want to do? \n(type:) 'move direction' or 'look direction' 'north, south, east, west: ").split()
         return a, b
 
     def print_room():
