@@ -17,7 +17,7 @@ def Game(playername):
     ppl_penalties = 0 
     print("\n")
     print(f"Welcome {playername}, you'll play as Cristiano Ronaldo")
-    print("You are able to shoot, left, right or middle ")
+    print("You are able to shoot and dive in the following directions: left, right or middle ")
     time.sleep(1)
   
     
