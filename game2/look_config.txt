@@ -5,15 +5,15 @@ north:There is a door._east:There is a litte door._south:Nothing._west:A door...
 north:Nothing here._east:A door._south:There's a rack_west:Some tools for cleaning.
 north:Looks like there is a door._east:There is a long bookshelf._south:Just a wall._west:There's a little door. Maybe a storeroom.
 north:There is a door to north._east:There is a door to east._south:A door to south_west:There's door. Looks like it's going outside there.
-north:Thre is a nice old cupboard_east:The room ends there._south:A door._west:There is a door.
+north:There is a nice old cupboard_east:The room ends there._south:A door._west:There is a door.
 north:There is a rack_east:There is a bookshelf. Nothing special._south:Just a wall_west:The exit.
-north:Thre is an exit._east:A door._south:A door._west:A wall with an old tapestry.
-north:There is a bookshelf._west:Thre is a door._east:A big door._south:There is a bookshelf.
+north:There is an exit._east:A door._south:A door._west:A wall with an old tapestry.
+north:There is a bookshelf._west:There is a door._east:A big door._south:There is a bookshelf.
 north:A wall with a glass cabinet._east:There is a door_south:Surprise: A door!_west:A big door.
 north:There is an exit._east:A door to outside._south:A door._west:There is a door.
 north:There is nothing._east:A door to the next corridor._south:A door._west:Nothing. Just a wall.
 north:A long wall_east:There is nothing_south:A door._west:A door to a corridor.
-north:There is a garden door._east:An entrance to the house_south:There is a fence_west:Thre is a fence.
+north:There is a garden door._east:An entrance to the house_south:There is a fence_west:There is a fence.
 north:A fence._east:There is a garden door._south:There's a garden door._west:A fence.
-north:There's a fence_east:There is a fence._south:1A garden door._west:There's a garden door.
-north:Thre is a garden door._east:Thre is a fence._south:Just a fence._west:The entrance to the house.
+north:There's a fence_east:There is a fence._south:A garden door._west:There's a garden door.
+north:There is a garden door._east:There is a fence._south:Just a fence._west:The entrance to the house.
