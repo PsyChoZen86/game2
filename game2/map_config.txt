@@ -1,4 +1,3 @@
-
 north:7_east:2
 west:1_east:3
 west:2_north:8_east:4
