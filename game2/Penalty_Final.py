@@ -2,12 +2,12 @@ import random as r
 import time
 import pygame
 
-
-def Game(playername):
+#Gamefunction
+def Game(playername):                                                                                     
     
-    pygame.mixer.init()
-    pygame.mixer.music.load("Scott_Holmes_-_04_-_Teamwork.mp3")
-    pygame.mixer.music.play()
+    pygame.mixer.init()                                                                                    
+    pygame.mixer.music.load("Scott_Holmes_-_04_-_Teamwork.mp3")                                            #load the music 
+    pygame.mixer.music.play()                                                                              #start playing music
     
     
     shoot_direction = ["left", "right", "middle"]                                                          
@@ -38,7 +38,7 @@ def Game(playername):
         time.sleep(1)
         print(f"The Goalkeeper is jumping to the {ki_jumpdirection}")                                      #where is the goaly jumping
         
-        
+       
         if pl_directionshoot == "left" and ki_jumpdirection =="right":                                     
             print("Keeper saved the ball ! NO GOAL")
         elif pl_directionshoot == "right" and ki_jumpdirection =="left":                                   
@@ -47,16 +47,16 @@ def Game(playername):
             print("Keeper saved the ball ! NO GOAL")                                                       
         else:                                                                                                                         
             print("GOOOAAAL, nice shot !")                                                                 
-            ppl_score = ppl_score +  1
-        return ppl_score, ppl_penalties                 #player score update
+            ppl_score = ppl_score +  1 
+        return ppl_score, ppl_penalties                                                                    #player score update
 
 
             
     #function for the Computer penalty        
     def penalty_ki(pki_score, pki_penalties):                                                                                                                                                                 #load the variable for total number of penalties
         #pki_penalties = 0                           
-        #pki_score        = 0                                                                                   #load the variable for the score of the Computer
-        pki_penalties  = pki_penalties + 1                                                          #update the total number of penalties
+        #pki_score        = 0                                                                              #load the variable for the score of the Computer
+        pki_penalties  = pki_penalties + 1                                                                 #update the total number of penalties
         
         valid2 = False                                                                                     #is input valid?
         while not valid2:
@@ -83,30 +83,30 @@ def Game(playername):
             
     #function for the actually score        
     def score(sc_kiscore,sc_plscore):                                                                                           
-        print(f" Your score is    : {sc_plscore} \n Computer score is: {sc_kiscore}")                          #show the actual score
+        print(f" Your score is    : {sc_plscore} \n Computer score is: {sc_kiscore}")                        #show the actual score
         
 
     #function for the result
     def result(res_kiscore, res_plscore):
-        pygame.mixer.music.stop()
+        pygame.mixer.music.stop()                                                                            #stop the music
         print(f''' Here are our result:                                                                                
                     Your score {res_plscore}
-                    Computer score {res_kiscore}''')                                                          #showcase for the result
-        if res_plscore > res_kiscore:                                                                            #compare the player score and computer score
+                    Computer score {res_kiscore}''')                                                         #showcase for the result
+        if res_plscore > res_kiscore:                                                                        #compare the player score and computer score
             print("Great game, you won!")                                                                  
-        elif res_plscore == res_kiscore:                                                                         #compare the player score and computer score
+        elif res_plscore == res_kiscore:                                                                     #compare the player score and computer score
             print("Remis!")                                                                                
-        else:                                                                                              #every other result
+        else:                                                                                                #every other result
             print("You lost the game, try again!")
 
-    ##########################################################
-    #loop for the penalties until 10
-    while n_penalties <=8:                                                                                
-        ki_score ,  n_penalties = penalty_ki(ki_score, n_penalties)                                                                                       #start function penalty_ki
-        score(ki_score , pl_score )                                                                                                  #show the score
-        pl_score ,  n_penalties= penalty_pl(pl_score, n_penalties)                                                                                       #start function penalty_pl
-        score(ki_score, pl_score)                                                                                                            #show the score
-    result(ki_score, pl_score)                                                                                                                #after 10 penalties, show the result
+#################
+    #loop for the penalties until 10 penalties shot
+    while n_penalties <=8:                                                                               
+        ki_score ,  n_penalties = penalty_ki(ki_score, n_penalties)                                          #start function penalty_ki
+        score(ki_score , pl_score )                                                                          #show the score
+        pl_score ,  n_penalties= penalty_pl(pl_score, n_penalties)                                           #start function penalty_pl
+        score(ki_score, pl_score)                                                                            #show the score
+    result(ki_score, pl_score)                                                                               #after 10 penalties, show the result
 
 
 
