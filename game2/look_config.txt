@@ -1,4 +1,3 @@
-
 north:There is a door._east:There is a door._south:Just a wall._west:A boring grey wall.
 north:Just a wall._east:There is a door:_south:Ah, a wall._west:There is a door.
 north:Uh, there's a door:_east:Seems to be a door._south:Only a wall. I think there is nothing special in the south at all._west:There's a wall.
